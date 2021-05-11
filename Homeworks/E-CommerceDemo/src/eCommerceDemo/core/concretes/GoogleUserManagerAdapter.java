@@ -1,8 +1,8 @@
-package eCommerceDemo.business.concretes;
+package eCommerceDemo.core.concretes;
 
-import eCommerceDemo.business.abstracts.GoogleService;
-import eCommerceDemo.core.concretes.GoogleUserManager;
+import eCommerceDemo.core.abstracts.GoogleService;
 import eCommerceDemo.entities.concretes.User;
+import GoogleManager.GoogleUserManager;
 
 public class GoogleUserManagerAdapter implements GoogleService{
 
@@ -11,7 +11,6 @@ public class GoogleUserManagerAdapter implements GoogleService{
 		
 		GoogleUserManager manager = new GoogleUserManager();
 		if(manager.isValid(user)) {
-			System.out.println("Google hesap bilgileri doðru : " + user.getFirstName());
 			return true;
 		}
 		return false;
